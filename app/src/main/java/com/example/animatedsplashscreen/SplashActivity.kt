@@ -1,5 +1,6 @@
 package com.example.animatedsplashscreen
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import java.util.*
@@ -13,6 +14,8 @@ class SplashActivity : AppCompatActivity() {
 
         this.supportActionBar?.hide()
 
-
+        Timer("SettingUp", false).schedule(2000) {
+            startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+        }
     }
 }
